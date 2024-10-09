@@ -4,15 +4,14 @@
 # Вывести "нет", если таких чисел нет.
 s = 0
 k = 0
-for n in range(0, 100):
-    for i in range(0, 10000):
-        x = int(input())
-        if x == 2**n and x!=0:
-            s = s+ x
-            k = k+1
-        elif x ==0:
-            break
-        n = n+1
-        if n == 0:
-            break
-print(s/k)
+for i in range(0, 100000):
+    n = int(input())
+    if n == 2 or n ==4 or n ==8 or n ==16 or n ==32 or n == 64 or n == 128 or n == 256 or n == 512 or n ==1024 or n == 2048 or n == 4096 or n ==8192:
+        k = k+1
+        s = s+n
+    elif n == 0:
+        break
+if k>0:
+    print(s/k)
+else:
+    print('no')

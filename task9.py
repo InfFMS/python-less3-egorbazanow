@@ -1,22 +1,22 @@
 # с клавиатуры вводится число N, а затем – N целых чисел.
 # Определить минимальное и максимальное среди двузначных чисел,
 # которые делятся на 3. Если таких чисел не было, вывести "нет".
-n =int(input())
 N = int(input())
-min = n
-max = n
 k = 0
-for i in range(0,N):
+n = 0
+b = 1
+c = 100
+for i in range(N):
     x = int(input())
-    if x >= 10 and x <= 99:
-        if min<x:
-            min = x
-        elif max > x:
-            max = x
-        elif x == 0:
-            break
-        k += 1
-if k !=0:
-    print(min, max)
+    if x%3 == 0  and 10<x<100:
+        k+=1
+        if b<x:
+            b = x
+        if c>x:
+            c=x
+if k>0 and c<100:
+    print(c,b)
+elif k>0 and c ==0:
+    print(b,b)
 else:
     print('no')
